@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int is_palindrome(listint_t **head);
-{
+{{
   listint_t *nhead, *tort, *hare, *ptort;
   listint_t *cut = NULL, *half, *it1, *it2;
 
