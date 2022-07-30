@@ -1,7 +1,9 @@
-#!usr/bin/python3
-'''Module for Reactangle class.'''
+#!/usr/bin/python3
+"""
+This module defines an empty class Rectangle
+"""
 
 
- class Rectangle:
-	 '''This class defines an empty Rectangle'''
-	    pass
+class Rectangle:
+    """Empty representation of a rectangle"""
+    pass      
