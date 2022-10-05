@@ -6,6 +6,6 @@ module.exports = class Rectangle {
   }
 
   print () {
-    for (let row = 0; row < this.height; row++)console.log('X'.repeat(this.height));
+    for (let row = 0; row < this.height; row++)console.log('X'.repeat(this.width, this.height));
   }
 };
