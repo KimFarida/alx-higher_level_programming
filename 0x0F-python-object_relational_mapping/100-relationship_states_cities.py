@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""Adds a brand new State to the system!"""
+"""Create state California"""
 
 from sys import argv
-from model_state import Base, State
+from relationship_state import Base, State
+from relationship_city import City
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
@@ -14,8 +15,10 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State).filter(State.id == 2).all()
-    if states:
-        states[0].name = "New Mexico"
+    new_state = State(name="California")
+    session.add(new_state)
+    session.commit()
+    new_city = City(name="San Francisco", state_id=new_state.id)
+    session.add(new_city)
     session.commit()
     session.close()
